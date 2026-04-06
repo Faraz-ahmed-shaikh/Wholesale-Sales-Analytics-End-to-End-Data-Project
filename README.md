@@ -1,87 +1,164 @@
-# Wholesale-Sales-Analytics-End-to-End-Data-Project
+# 📦 Wholesale Sales Analytics – End-to-End Data Project (Python | SQL | Tableau)
 
-## Overview
-This project delivers a complete analytics workflow for a UK based wholesale retailer using the Online Retail II dataset. Over 1 million transactional records were cleaned, modeled, analyzed, and visualized to uncover trends in revenue, customer behavior, product performance, returns, and geographic markets.
+## 📖 Overview
+This project analyzes over **1 million transactions** from a UK-based wholesale retailer to understand revenue trends, customer behavior, product performance, return patterns, and geographic markets.
 
-The project covers the full pipeline:
-Python → PostgreSQL → Tableau → Final Business Insights Report
+The goal was to transform raw transactional data into clear, actionable business insights using a complete analytics workflow:
 
-## 📌 Business Problem : 
+**Python → PostgreSQL → Tableau → Business Insights**
 
-The company lacked centralized visibility into its operations, including:
-Seasonal revenue behavior, Customer retention and revenue concentration, Product-level profitability and dead SKUs, Return patterns & financial loss and Geographic performance differences.
+---
 
-The objective was to transform raw data into meaningful insights and create dashboards that support better decisions in inventory, customer strategy, and operations.
+## 📌 Business Problem
 
-## 📊 Key Metrics (Snapshot)
-Metric	Value : 
-Total Revenue	~£20.97M.
-Units Sold	11.4M+.
-Registered Customers	5,939.
-Guest Orders	240K+.
-Average Order Value	£523.
-Return Rate	9.3%.
-Revenue Lost to Returns	7.28%.
-Time Period	Dec 2009 – Dec 2011.
+The company lacked clear visibility into:
+
+- Seasonal revenue patterns  
+- Customer retention and revenue concentration  
+- Product performance and dead inventory  
+- Return behavior and financial impact  
+- Geographic performance differences  
+
+This limited the company's ability to make informed decisions related to inventory planning, customer strategy, and operational efficiency.
+
+---
+
+## 📊 Key Metrics
+
+| Metric | Value |
+|--------|------|
+| **Total Revenue** | ~£20.97M |
+| **Units Sold** | 11.4M+ |
+| **Registered Customers** | 5,939 |
+| **Guest Orders** | 240K+ |
+| **Average Order Value** | £523 |
+| **Return Rate** | 9.3% |
+| **Revenue Loss (Returns)** | 7.28% |
+| **Time Period** | Dec 2009 – Dec 2011 |
+
+---
 
 ## 🛠 Tools & Technologies
 
-Python: Pandas, NumPy, Matplotlib
-SQL: PostgreSQL (schema design, modeling, advanced analysis)
-Tableau: 6 interactive dashboards
-Excel/CSV: Raw data handling
+- **Python** — Pandas, NumPy, Matplotlib  
+- **PostgreSQL** — Data modeling and SQL analysis  
+- **Tableau** — Interactive dashboards  
+- **Excel / CSV** — Data preparation and handling  
+
+---
 
 ## 🔍 Project Workflow
 
-1. Data Cleaning (Python)
-Standardized column names and data types.
-Fixed customer IDs, product text, timestamps.
-Flagged cancelled orders, returns, non-product codes.
-Removed corrupted records (0.2%).
-Enriched data with derived fields (total revenue, year/month/day/hour).
+### **1️⃣ Data Cleaning (Python)**
 
-2. SQL Analysis (PostgreSQL)
-Performed deep-dive analysis across five areas:
-Revenue trends & seasonality.
-Customer segmentation & repeat behavior.
-SKU performance & inventory health.
-Return patterns & financial impact.
-Geographic performance.
+- Standardized column names and corrected data types  
+- Handled missing values and inconsistencies  
+- Flagged returns, cancellations, and non-product codes  
+- Removed invalid records (corrupted pricing rows)  
+- Created derived features such as:
+  - `total_price`
+  - `year`, `month`, `day`, `hour`
 
-4. Dashboarding (Tableau)
-Six dashboards were created for different business functions:
-Executive Overview.
-Sales & Revenue Analysis.
-Geographic Insights.
-Product Performance.
-Customer Segmentation.
-Returns & Operational Quality.
+---
 
-## 📈 Key Insights Summary
+### **2️⃣ SQL Analysis (PostgreSQL)**
 
-Revenue : Strong seasonal peaks in Q3–Q4, Sales cluster between 10 AM – 3 PM, Low-margin, high-volume business model.
+Performed structured analysis across key business areas:
 
-Customers : Top 20% generate 77% of revenue, Repeat purchase rate: 72% , Guest orders: 240K+, limiting personalization.
+- Revenue trends and seasonal patterns  
+- Customer segmentation and repeat behavior  
+- Product performance and dead SKU detection  
+- Return trends and financial loss estimation  
+- Geographic performance comparison  
 
-Products : Most units sold are low-cost décor items, Dead SKUs indicate inventory inefficiency, Fragile & electrical items drive high return rates.
+---
 
-Returns : Unit return rate is 9.3% , Revenue lost is 7.28% , High returns are from long-distance countries
+### **3️⃣ Dashboard Development (Tableau)**
 
-Geography : UK + nearby Europe dominate revenue, Limited expansion outside Europe, Higher return rates in long-transit regions.
+Developed **six business-focused dashboards**:
 
-## 📌 Recommendations (Short)
+1. Executive KPI Overview  
+2. Sales & Revenue Performance  
+3. Geographic Market Insights  
+4. Product Portfolio Performance  
+5. Customer Behavior & Segmentation  
+6. Returns & Operational Quality  
 
-Strengthen Q3–Q4 inventory; reduce Q1 stock,
-Prioritize top high-value customers with loyalty programs,
-Convert guest buyers via sign-up incentives,
-Improve packaging & QC for fragile items,
-Discontinue dead SKUs,
-Expand softly into stable European markets before distant ones.
+---
+
+## 📈 Key Insights
+
+### **Revenue**
+- Strong seasonal peaks observed in **Q3–Q4**
+- Peak buying hours: **10 AM – 3 PM**
+- Business follows a **high-volume, low-margin** model
+
+---
+
+### **Customers**
+- Top **20% of customers generate 77% of total revenue**
+- Repeat purchase rate: **72%**
+- High volume of guest orders limits customer tracking
+
+---
+
+### **Products**
+- Low-cost decorative items dominate sales volume
+- Multiple dead SKUs indicate inefficient inventory usage
+- Fragile and electrical items drive higher return rates
+
+---
+
+### **Returns**
+- Overall return rate: **9.3%**
+- Revenue loss due to returns: **7.28%**
+- Higher return rates observed in long-distance shipments
+
+---
+
+### **Geography**
+- UK and nearby European markets dominate revenue
+- Limited presence in distant international markets
+- Higher return risk observed in long-transit regions
+
+---
+
+## 📌 Recommendations
+
+- Optimize inventory before **Q4 peak demand**
+- Reduce excess stock during **Q1 slowdown**
+- Introduce loyalty programs for high-value customers
+- Encourage guest users to register
+- Improve packaging for fragile products
+- Discontinue low-performing SKUs
+- Expand strategically into stable European markets
+
+---
+
+## ⭐ Why This Project Matters
+
+This project demonstrates the ability to:
+
+- Work with **large real-world datasets (1M+ records)**
+- Perform structured **data cleaning and transformation**
+- Use **SQL to answer business-critical questions**
+- Build **interactive dashboards** for stakeholders
+- Translate raw data into **clear business strategies**
+
+It reflects a **complete real-world data analytics workflow**, similar to what analysts perform in industry environments.
+
+---
 
 ## 📎 Deliverables
 
-Full analysis report (PDF) : 
-6 Tableau dashboards,
-SQL analysis scripts,
-Cleaned dataset,
-Portfolio case study (1–2 page summary).
+- 📄 Final analysis report (PDF)  
+- 📊 Tableau dashboards  
+- 🗃 SQL queries and analysis scripts  
+- 🧹 Cleaned dataset  
+- 📑 Portfolio case study presentation  
+
+---
+
+## 📬 Contact
+
+If you'd like to discuss this project or share feedback, feel free to connect with me on LinkedIn.
